@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,800;1,800&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+            line-height: 1;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 360px;
+            min-height: 100vh;
+            min-height: 100svh;
+            font-family: "Nunito", sans-serif;
+            color: #fff;
+
+            background-image: linear-gradient(180deg, #131F55 0%, #100D22 115.85%);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .section {
+            padding: 50px 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1308px;
+            margin: 0 auto;
+            padding-inline: 1.5rem;
+        }
+
+        .winners .section-title {
+            margin-bottom: 2rem;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .winners .winners-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .winners-list li {
+            position: relative;
+            padding: 2px;
+            background-image: linear-gradient(to bottom right, #7995D1, rgba(255, 255, 255, .1));
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .winners-list li:hover,
+        .winners-list li:active {
+            transform: scale(1.05);
+        }
+
+        .winners-list article {
+            width: 100%;
+            min-height: 125px;
+            padding: 1.125rem 1rem;
+
+            display: flex;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #131842;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .winners-list article::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(35%, -40%);
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background-image: linear-gradient(#1B3792, #101F56);
+        }
+
+        .winners-list article .img {
+            width: 88px;
+            height: 88px;
+            margin-right: 1rem;
+            border-radius: .5rem;
+            overflow: hidden;
+
+        }
+
+        .winners-list article .img img {
+            display: block;
+            object-fit: cover;
+        }
+
+        .winners-list article .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .winners-list article .name {
+            font-size: 15px;
+            margin-bottom: 0.5rem;
+        }
+
+        .winners-list article .prize,
+        .winners-more h2 {
+            font-size: 20px;
+        }
+
+        .winners-list article .game-logo {
+            margin-top: auto;
+            width: 40px;
+        }
+
+        .winners-more h2 {
+            max-width: 145px;
+            align-self: flex-end;
+        }
+
+        .winners-list article.winners-more::before {
+            background-image: linear-gradient(#1160FB, #04389F);
+        }
+
+        .winners-more img {
+            margin-left: auto;
+            margin-top: auto;
+            align-self: flex-end;
+        }
+
+        @media (min-width: 760px) {
+            .container {
+                padding-inline: 64px;
+            }
+
+            .section {
+                padding: 70px;
+            }
+
+            .winners .winners-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (min-width: 1024px) {
+            .section {
+                padding: 100px;
+            }
+
+            .winners .section-title {
+                font-size: 48px;
+            }
+
+            .winners .winners-list {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .winners-list article .name {
+                font-size: 20px;
+            }
+
+            .winners-list article .prize,
+            .winners-more h2 {
+                font-size: 24px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <section class="section winners container">
+            <h2 class="section-title">
+                Победители
+            </h2>
+            <ul class="winners-list" role="list">
+                <li>
+                    <article>
+                        <div class="img"><img src="/assets/img/winner-photo-auto.jpg" alt=""></div>
+                        <div class="content">
+                            <h3 class="name">Серик С</h3>
+                            <h2 class="prize">Автомобиль</h2>
+                            <img src="/assets/img/logo-649.svg" alt="" class="game-logo">
+                        </div>
+                        <a href="#"></a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="#"></a>
+                        <div class="img"><img src="/assets/img/winner-photo-money.jpg" alt=""></div>
+                        <div class="content">
+                            <h3 class="name">Иванов В</h3>
+                            <h2 class="prize">46&nbsp;321&nbsp;600&nbsp;₸</h2>
+                            <img src="/assets/img/logo-SL.svg" alt="" class="game-logo">
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="#"></a>
+                        <div class="img"><img src="/assets/img/winner-photo-appartment.jpg" alt=""></div>
+                        <div class="content">
+                            <h3 class="name">Иванов В</h3>
+                            <h2 class="prize">Квартира</h2>
+                            <img src="/assets/img/logo-TB.svg" alt="" class="game-logo">
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="winners-more">
+                        <a href="#"></a>
+                        <h2>Все победители</h2>
+                        <img src="/assets/img/arrow.svg" alt="">
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <template>
+        <li>
+            <article>
+                <div class="img"><img src="" alt=""></div>
+                <div class="content">
+                    <h3 class="name"></h3>
+                    <h2 class="prize"></h2>
+                    <img src="" alt="" class="game-logo">
+                </div>
+                <a href="#"></a>
+            </article>
+        </li>
+    </template>
+</body>
+
+</html>
